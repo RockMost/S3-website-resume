@@ -6,9 +6,11 @@ on:
       - main  # Change this to your main branch name if different
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        node-version: '20'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
