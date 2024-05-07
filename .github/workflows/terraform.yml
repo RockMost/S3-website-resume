@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '20'
       - name: Checkout code
-        uses: actions/checkout@master
+        uses: actions/checkout@main
         
       - name: List directory contents
         run: ls -R S3-website-resume  
@@ -30,6 +30,5 @@ jobs:
           AWS_REGION: us-east-1
           SOURCE_DIR: S3-website-resume/Resume.html
           DEST_DIR: "/"  # Update this if you want to store in a subfolder in the bucket
-      - name: List directory contents
-        run: ls -R S3-website-resume
+     
      
