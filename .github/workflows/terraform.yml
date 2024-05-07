@@ -1,3 +1,5 @@
+echo "::debug::Set the Octocat variable"
+
 defaults:
   run:
     shell: bash
