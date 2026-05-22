@@ -3,194 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rodney Powell - Resume</title>
+    <title>Rodney M Powell - Resume</title>
     <style>
+        * { box-sizing: border-box; }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4b2;
+            color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 860px;
             margin: 20px auto;
             background-color: #ffffffb3;
-            padding: 20px;
+            padding: 40px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: relative;
         }
-        h1, h2, h3 {
-            margin-top: 0;
-            color: #333;
+        h1 {
+            text-align: center;
+            margin: 0 0 4px 0;
+            color: #1F4E79;
+            font-size: 2.2em;
         }
-        h2 {
-            font-size: 1.5em;
+        h2.tagline {
+            text-align: center;
+            margin: 0 0 12px 0;
+            font-size: 1.1em;
+            font-weight: normal;
+            color: #595959;
+            font-style: italic;
         }
         .contact-info {
-            margin-bottom: 20px;
+            text-align: center;
+            margin-bottom: 24px;
+            font-size: 0.9em;
+            color: #595959;
         }
-        .work-experience, .education, .skills, .certifications {
-            margin-bottom: 30px;
+        .contact-info a {
+            color: #1F4E79;
+            text-decoration: none;
         }
-        .work-experience h3, .education h3, .skills h3, .certifications h3 {
-            border-bottom: 2px solid #ccc;
+        .contact-info span {
+            margin: 0 8px;
+            color: #ccc;
+        }
+        .section {
+            margin-bottom: 28px;
+        }
+        .section h3 {
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #1F4E79;
+            border-bottom: 2px solid #1F4E79;
             padding-bottom: 5px;
-            margin-bottom: 10px;
+            margin-bottom: 14px;
         }
-        ul {
+        .summary p {
+            margin: 0;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        /* Experience */
+        .job { margin-bottom: 20px; }
+        .job-header { margin-bottom: 4px; }
+        .job-title { font-weight: bold; font-size: 1em; }
+        .job-meta { color: #595959; font-size: 0.88em; font-style: italic; }
+        .job-meta .company { color: #1F4E79; font-weight: bold; font-style: normal; }
+        ul.job-bullets {
+            margin: 6px 0 0 0;
             padding-left: 20px;
-            margin-top: 10px;
         }
-        li {
-            margin-bottom: 10px;
+        ul.job-bullets li {
+            margin-bottom: 5px;
+            font-size: 0.92em;
+            line-height: 1.5;
         }
+        /* Projects */
+        .project { margin-bottom: 18px; }
+        .project-title { font-weight: bold; font-size: 0.95em; color: #333; }
+        .project-stack { font-size: 0.85em; color: #595959; font-style: italic; margin-bottom: 4px; }
+        .project-stack span { color: #1F4E79; font-weight: bold; font-style: normal; }
+        /* Certs */
+        .cert-subhead {
+            font-weight: bold;
+            color: #1F4E79;
+            font-size: 0.9em;
+            margin: 10px 0 4px 0;
+        }
+        ul.cert-list {
+            margin: 0 0 8px 0;
+            padding-left: 20px;
+        }
+        ul.cert-list li {
+            font-size: 0.92em;
+            margin-bottom: 4px;
+        }
+        /* Visitor counter */
+        .visitor {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #595959;
+            border-top: 1px solid #eee;
+            padding-top: 16px;
+        }
+        .visitor strong { color: #1F4E79; }
+        /* Headshot */
         .headshot {
             position: absolute;
-            top: 30px;
-            right: 125px;
-            width: 185px;
-            height: 185px;
+            top: 40px;
+            right: 40px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
-            border: 10px solid #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 6px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            object-fit: cover;
+        }
+        @media (max-width: 600px) {
+            .headshot { display: none; }
+            .skills-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-
 <div class="container">
-    <img src="https://media.githubusercontent.com/media/RockMost/S3-website-resume/main/images/headshot.jpeg" alt="Rodney Powell" class="headshot">
-    <h1>Rodney Powell</h1>
-    <h2>Multi-talented IT Professional</h2>
+
+    <img src="https://media.githubusercontent.com/media/RockMost/S3-website-resume/main/images/headshot.jpeg" alt="Rodney M Powell" class="headshot">
+
+    <h1>Rodney M Powell</h1>
+    <h2 class="tagline">IT Specialist &nbsp;·&nbsp; Cloud & Automation Practitioner</h2>
     <div class="contact-info">
-        <p>Lithonia, GA 30058</p>
-        <p>R.powell4374@gmail.com</p>
-        <p>+1 404 849 4789</p>
+        Atlanta, Georgia
+        <span>|</span> (404) 849-4789
+        <span>|</span> <a href="mailto:r.powell4374@gmail.com">r.powell4374@gmail.com</a>
+        <span>|</span> <a href="https://www.linkedin.com/in/rodneympowell/" target="_blank">linkedin.com/in/rodneympowell</a>
+        <span>|</span> <a href="https://iamrodneypowell.com" target="_blank">iamrodneypowell.com</a>
     </div>
-    <div class="work-experience">
-        <h3>Relevant Work Experience</h3>
+
+    <!-- SUMMARY -->
+    <div class="section summary">
+        <h3>Summary</h3>
+        <p>IT professional with 6+ years of experience in enterprise support and identity administration, including managing SaaS and identity platforms at scale. Self-directed learner actively expanding into cloud infrastructure and automation — with completed projects deploying AWS-based serverless pipelines, containerized workloads, and third-party API integrations. Looking to grow into a cloud or DevOps-adjacent role where hands-on project experience and a strong IT foundation can be applied and deepened.</p>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+        <h3>Technical Skills</h3>
         <ul>
-            <li>
-                <strong>IT Specialist</strong><br>
-                JFrog - Atlanta, GA<br>
-                May 2022 to Present
-                <ul>
-                    <li>Sole onsite contact for IT support</li>
-                    <li>Admin for various platforms (Active Directory, Office 365, Google Workspace, etc.)</li>
-                    <li>Videoconferencing equipment maintenance</li>
-                    <li>Device provisioning / onboarding / offboarding</li>
-                    <li>White Glove Executive Support</li>
-                    <li>Technical training</li>
-                    <li>Asset distribution, inventory, and procurement</li>
-                    <li>Hardware and software support for local office, global, and remote employees</li>
-                    <li>Monitoring network and user devices</li>
-                    <li>Office Access control</li>
-                    <li>Vendor account management</li>
-                    <li>A/V equipment setup and maintenance</li>
-                </ul>
-            </li>
-            <br>
-            <li>
-                <strong>Tier II Technical Support Representative</strong><br>
-                Pearson - Remote<br>
-                April 2021 to May 2022
-                <ul>
-                    <li>Sole onsite contact for IT support</li>
-                    <li>Remotely address technical issues via inbound phone calls as well as webmail in Pearson Student Technical Support department</li>
-                    <li>Worked independently and with a team to resolve various issues with hardware and software</li>
-                    <li>Advised callers on the navigation and troubleshooting of Pearson Educations proprietary software platforms “Connexus” and “Buzz"</li>
-                    <li>Maintained a high level of customer care through ownership, resolution, and follow-up for tickets</li>
-                    <li>Performed light system administration duties through AD Manager including MEM setup and PW management</li>
-                    <li>Orchestrated the escalation of tickets and technology repairs and replacements</li>
-                </ul>
-            </li>
-            <br>
-            <li>
-                <strong>Help Desk Representative</strong><br>
-                NCR Corporation - Remote<br>
-                November 2020 to April 2021
-                <ul>
-                    <li>Remotely delivered solutions, dispatch service personnel, and when appropriate verify resolution of a customer's issue that has not been escalated</li>
-                    <li>Worked directly with the customer to understand the problem, and/or escalate problem to the next level following the documented Remote Incident Management Process</li>
-                    <li>Performed Level I technical troubleshooting with end-users of PCs and retail point-of-sale devices</li>
-                    <li>Generated daily and weekly incident reporting; Reviews incident history to determine recurring faults, provide technical phone support on Retail products, systems and various software products</li>
-                    <li>Provided accurate and creative solutions to user problems of moderate nature to maximize product or system availability</li>
-                    <li>Took ownership of service request from customers and ensured timely and satisfactory resolution of problems Escalate both internally and externally when required according to defined Escalation Paths, enhance and develop quality support methods and communication skills through coaching feedback, and other developmental approaches</li>
-                    <li>Assisted in the resolution of user and support issues over multiple user sites to ensure timely distribution of knowledge and cause positive impact on user satisfaction; Updates work orders and provides status information Research, resolve, and respond to questions received via telephone calls, letters, and callbacks in a timely manner</li>
-                    <li>Recorded information into the HDS (Help Desk Solution) system Document, verify and make appropriate corrections to the incident record and customer profile;Ensured thorough documentation of problem description and all subsequent activity; Wrote knowledge articles based on lessons learned in resolving customer issues Contribute as a team member</li>
-                    <li>Maintained technical knowledge and expertise associated with multiple applications and hardware specific to individual customer's solution Support less experienced colleagues on the helpdesk through joint working, monitoring, direct feedback and knowledge sharing</li>
-                </ul>
-            </li>
-            <br>
-            <li>
-                <strong>Owner / Manager</strong><br>
-                Rock Most Productions - Atlanta, GA<br>
-                January 2007 to March 2020
-                <ul>
-                    <li>Corporate, Nightlife and Private event production and DJ services </li>
-                    <li>Project Management / Client Relations</li>
-                    <li>Technical consultation</li>
-                    <li>Device provisioning / onboarding / offboarding</li>
-                    <li>Equipment maintenance including PC & Mac computer</li>
-                    <li>Wordpress website creation / management</li>
-                    <li>Creator, Producer and Host of "The Get Right Mixshow" which is a weekly live video broadcast featuring music videos from several eras and genres of popular music mixed live by DJ Rock Most. Responsible for all aspects of show such as graphics, video, audio, live switching and performing DJ mix</li>
-                </ul>
-            </li>
-            <br>
-            <li>
-                <strong>Owner </strong><br>
-                Red Reign Entertainment and Studios - Atlanta, GA<br>
-                November 2001 to December 2006
-                <ul>
-                    <li>Managed Recording Studio </li>
-                    <li>Scheduled and conducted sessions</li>
-                    <li>Invoicing clients</li>
-                    <li>Produced, mixed and mastered music for recording artist, film, television and video games</li>
-                </ul>
-            </li>
+            <li><strong>Professional Experience:</strong> Identity &amp; SaaS Admin (Okta, Azure Active Directory, Office 365, Google Workspace, AirWatch/MDM, Jamf, Slack), IT Support &amp; Operations, Bash, AWS CLI, Git/GitHub</li>
+            <li><strong>Cloud &amp; Infrastructure (Project &amp; Self-Study):</strong> AWS Lambda, Step Functions, ECS Fargate, CDK, API Gateway, S3, DynamoDB, SQS, SSM Parameter Store, CloudWatch, ECR, Lightsail, ACM, Route 53, Terraform</li>
+            <li><strong>Automation &amp; Development:</strong> Google Apps Script, n8n, REST APIs</li>
+            <li><strong>Containerization:</strong> Docker, ECR</li>
+            <li><strong>AI / ML:</strong> Amazon Bedrock (Nova Canvas, Claude 3.5 Haiku), prompt engineering, AI-assisted development</li>
+            <li><strong>Project-Assisted Tools:</strong> Python, Node.js, AWS CDK (TypeScript), Playwright, FFmpeg, Pillow</li>
+            <li><strong>Mobile Development:</strong> Flutter &amp; Dart (course-complete with project experience)</li>
+            <li><strong>DevOps &amp; Web:</strong> GitHub Actions, Jenkins, WordPress, CI/CD pipelines</li>
         </ul>
     </div>
-    <div class="education">
-        <h3>Education</h3>
-        <p>Ravenna High School (College Prep Diploma) - 1992</p>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+        <h3>Experience</h3>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">IT Specialist</div>
+                <div class="job-meta"><span class="company">JFrog</span> &nbsp;·&nbsp; Mar 2024 – Present &nbsp;·&nbsp; Atlanta, GA — On-site</div>
+            </div>
+            <ul class="job-bullets">
+                <li>Primary on-site IT contact for Atlanta office; responsible for all hardware, software, and identity issues</li>
+                <li>Administrator for Okta, Azure Active Directory, Office 365, Google Workspace, AirWatch, Jamf, and Slack</li>
+                <li>Manage full employee lifecycle: provisioning, onboarding, and off-boarding workflows</li>
+                <li>Oversee vendor account management, asset procurement, and office access control</li>
+                <li>Monitor network health and endpoint device compliance across local and remote workforce</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Information Technology Support Technician</div>
+                <div class="job-meta"><span class="company">JFrog</span> &nbsp;·&nbsp; May 2022 – Mar 2024 &nbsp;·&nbsp; Atlanta, GA — On-site</div>
+            </div>
+            <ul class="job-bullets">
+                <li>On-site IT contact responsible for end-user support across hardware, software, and SaaS platforms</li>
+                <li>Administered identity and access management via Okta and Active Directory</li>
+                <li>Delivered technical training and maintained complete asset inventory</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Tier II Student Technical Support Agent</div>
+                <div class="job-meta"><span class="company">Pearson</span> &nbsp;·&nbsp; Apr 2021 – May 2022 &nbsp;·&nbsp; Remote</div>
+            </div>
+            <ul class="job-bullets">
+                <li>Resolved inbound technical issues via phone and webmail for Pearson's student-facing support department</li>
+                <li>Administered users via AD Manager including MEM setup and password management</li>
+                <li>Triaged and escalated tickets for proprietary LMS platforms Connexus and Buzz</li>
+                <li>Maintained high customer satisfaction through ownership and follow-up of all assigned tickets</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Help Desk Representative</div>
+                <div class="job-meta"><span class="company">NCR Corporation</span> &nbsp;·&nbsp; Nov 2020 – Apr 2021 &nbsp;·&nbsp; Remote</div>
+            </div>
+            <ul class="job-bullets">
+                <li>Delivered Level I/II remote troubleshooting for PCs, Thin Clients, printers, tablets, and scanners</li>
+                <li>Followed Remote Incident Management Process to dispatch field personnel and verify resolution</li>
+                <li>Generated daily and weekly incident reports; identified and flagged recurring fault patterns</li>
+                <li>Supported retail products and systems across multiple customer sites</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">IT Support Specialist</div>
+                <div class="job-meta"><span class="company">B Squared Networking, LLC</span> &nbsp;·&nbsp; Nov 2019 – Nov 2020 &nbsp;·&nbsp; Atlanta, GA</div>
+            </div>
+            <ul class="job-bullets">
+                <li>Delivered managed IT support services to business clients across the Atlanta metro area</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Owner / AV & Event Technology Specialist</div>
+                <div class="job-meta"><span class="company">Rock Most Productions</span> &nbsp;·&nbsp; 2007 – 2020 &nbsp;·&nbsp; Atlanta, GA</div>
+            </div>
+            <ul class="job-bullets">
+                <li>Owned and operated a full-service event production company serving corporate events, brand activations, weddings, and private events</li>
+                <li>Designed, configured, and operated professional sound and lighting systems for live events of varying scale</li>
+                <li>Managed all AV equipment procurement, setup, teardown, and troubleshooting on-site</li>
+                <li>Coordinated with clients and venues on technical riders, power requirements, and AV logistics</li>
+                <li>Performed as on-site DJ talent while simultaneously operating and managing all production technology</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Owner / Studio Engineer</div>
+                <div class="job-meta"><span class="company">Red Reign Entertainment and Studios</span> &nbsp;·&nbsp; Nov 2001 – Jun 2007 &nbsp;·&nbsp; Atlanta, GA</div>
+            </div>
+            <ul class="job-bullets">
+                <li>Owned and operated a full-service recording studio; managed scheduling, client invoicing, and vendor relationships</li>
+                <li>Designed and maintained the studio's AV signal chain — routing, patching, and troubleshooting audio hardware</li>
+                <li>Operated professional DAW environments for multitrack recording, editing, and mixdown</li>
+                <li>Managed hardware and software procurement, licensing, and studio equipment inventory</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Retail Sales Consultant</div>
+                <div class="job-meta"><span class="company">Mars Music Store</span> &nbsp;·&nbsp; Sep 2001 – Feb 2002 &nbsp;·&nbsp; Atlanta, GA</div>
+            </div>
+            <ul class="job-bullets">
+                <li>Advised high-end clients on professional audio, recording, and live sound equipment</li>
+                <li>Coordinated delivery and installation of professional music technology gear</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Retail Sales Consultant</div>
+                <div class="job-meta"><span class="company">Guitar Center</span> &nbsp;·&nbsp; Jan 2000 – Aug 2001 &nbsp;·&nbsp; Mayfield Heights, OH</div>
+            </div>
+            <ul class="job-bullets">
+                <li>Provided technical consultation on audio, recording, and musical hardware to customers</li>
+                <li>Maintained retail floor and ensured all equipment was operational and demo-ready</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Advanced Tech Support Specialist</div>
+                <div class="job-meta"><span class="company">XTRASOURCE CALLCENTER SL</span> &nbsp;·&nbsp; May 1998 – Jan 1999 &nbsp;·&nbsp; Kent, OH</div>
+            </div>
+            <ul class="job-bullets">
+                <li>Resolved advanced escalated technical issues for consumer and professional electronics beyond Tier I</li>
+            </ul>
+        </div>
     </div>
-    <div class="skills">
-        <h3>Skills</h3>
-        <ul>
-            <li>Cloud Computing, Containerization, Application deployment, CI/CD pipelines, IT Technical Support, Customer Support, Technical Training, Device Management, Networking, Wordpress Web Design, Cloud Infrastructure management, IT Consulting, Database Query & DevOps.</li>
+
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+        <h3>Certifications & Continuing Education</h3>
+        <div class="cert-subhead">Certifications</div>
+        <ul class="cert-list">
+            <li>AWS Certified Cloud Practitioner — Amazon Web Services, 2021</li>
+            <li>Google IT Support Professional Certificate — Coursera, 2020</li>
+        </ul>
+        <div class="cert-subhead">Completed Courses (Udemy)</div>
+        <ul class="cert-list">
+            <li>Ultimate AWS Certified Developer Associate 2025</li>
+            <li>Terraform For AWS — Beginner to Expert</li>
+            <li>Flutter & Dart — The Complete Guide</li>
+            <li>Programming for Complete Beginners in C#</li>
         </ul>
     </div>
-    <div class="skills">
-        <h3>Tools Used</h3>
-        <ul>
-            <li>AWS, Azure AD, GCP, Wordpress, Mac, Window, Linux, Terraform, Git, Docker, Kubernetes, JFrog Platform, Python, Dart/Flutter, Yaml, Json, Bash, Ansible, Jenkins, Maven, Office 365, Google Workspace, Slack, Timeclock, Jamf, Airwatch, AWS, Freshservice, Meraki and OKTA</li>
-        </ul>
+
+    <!-- PROJECTS -->
+    <div class="section">
+        <h3>Projects</h3>
+
+        <div class="project">
+            <div class="project-title">Music Release Automation Pipeline</div>
+            <div class="project-stack"><span>Stack:</span> AWS CDK · Lambda · Step Functions · ECS Fargate · Docker · Playwright · S3 · DynamoDB · SQS · API Gateway · SSM · Amazon Bedrock · FFmpeg · Pillow · Google Apps Script</div>
+            <ul class="job-bullets">
+                <li>Architected and built a fully automated end-to-end release distribution pipeline triggered via Google Form</li>
+                <li>Pipeline flow: Google Form → Apps Script → API Gateway → Lambda → Step Functions orchestration</li>
+                <li>Integrated Amazon Bedrock (Nova Canvas) for AI cover art generation with logo overlay via Pillow Lambda layer</li>
+                <li>ECS Fargate tasks run a Playwright/Chromium Docker image to automate uploads to BeatStars, Bandcamp, Taxi, and Disco</li>
+                <li>Built AI caption generation via Claude 3.5 Haiku and FFmpeg Lambda layer for visualizer video creation</li>
+                <li>All credentials and config stored securely in AWS SSM Parameter Store; infrastructure deployed via AWS CDK</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-title">End-to-End Booking Automation — DJ Rock Most</div>
+            <div class="project-stack"><span>Stack:</span> n8n · AI Agents · REST APIs · Email Automation · Workflow Orchestration</div>
+            <ul class="job-bullets">
+                <li>Built a fully automated DJ booking pipeline covering the entire client lifecycle — from cold outreach through proposal creation, invoicing, and booking confirmation</li>
+                <li>Integrated AI agents to handle inbound lead responses, qualify prospects, and generate context-aware replies without manual intervention</li>
+                <li>Automated proposal and invoice generation triggered by lead qualification stage</li>
+                <li>Orchestrated multi-step workflows via n8n with conditional logic and third-party API integrations</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Back to the Boom Bap — Event Website & Sponsorship Automation</div>
+            <div class="project-stack"><span>Stack:</span> WordPress · n8n · AI Agents · REST APIs · Email Automation · HTML/CSS</div>
+            <ul class="job-bullets">
+                <li>Built boombapparty.com event website with consistent branding and structure</li>
+                <li>Designed and automated end-to-end sponsorship outreach pipeline using n8n</li>
+                <li>Integrated AI agents to handle inbound sponsorship inquiries and generate contextual responses autonomously</li>
+                <li>Automated multi-stage communication sequences with conditional branching based on prospect engagement</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Cloud Resume Challenge — iamrodneypowell.com</div>
+            <div class="project-stack"><span>Stack:</span> AWS S3 · CloudFront · Route 53 · ACM · Lambda · DynamoDB · API Gateway · GitHub Actions · Terraform · HTML/CSS/JavaScript</div>
+            <ul class="job-bullets">
+                <li>Completed the Cloud Resume Challenge — a project designed to demonstrate real-world AWS cloud skills</li>
+                <li>Built and deployed a personal resume website served via S3 static hosting and CloudFront CDN</li>
+                <li>Configured custom domain with Route 53 and provisioned SSL via AWS ACM</li>
+                <li>Implemented a serverless visitor counter using API Gateway, Lambda (Python), and DynamoDB</li>
+                <li>Automated CI/CD deployment pipeline via GitHub Actions for continuous delivery on push</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-title">DJRockMost.com — DJ Services Website</div>
+            <div class="project-stack"><span>Stack:</span> WordPress · Amazon Lightsail · AWS Route 53 · AWS ACM · HTML/CSS</div>
+            <ul class="job-bullets">
+                <li>Built and maintains a professional DJ services website fully hosted within AWS</li>
+                <li>Configured custom domain via Route 53 and provisioned SSL certificate through AWS ACM</li>
+                <li>Hosted on Amazon Lightsail; maintains consistent page structure, styling, and layout across all site sections</li>
+            </ul>
+        </div>
     </div>
-    <div class="certifications">
-        <h3>Certifications and Licenses</h3>
-        <ul>
-            <li>AWS Certified Cloud Practitioner - February 2022 to February 2025</li>
-            <li>Google IT Support Certificate (Coursera) - August 2020 to Present</li>
-            <li>Terraform for AWS Beginner to Expert (Udemy) - April 2022 to Present </li>
-            <li>Devops Beginners to Advance (Udemy) - March 2024 to Present </li>
-        </ul>
+
+    <!-- VISITOR COUNTER -->
+    <div class="visitor">
+        <strong>You are visitor number</strong>
+        <p id="apiValue">Loading...</p>
     </div>
-    <h2>You are visitor number</h2>
-    <p id="apiValue">Loading...</p>
 
     <script>
-        // Function to fetch data from the API
         function fetchData() {
             fetch('https://pfr0scnnw2.execute-api.us-east-1.amazonaws.com/default/hitc-demo1')
                 .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text(); // Get the response as text
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.text();
                 })
                 .then(data => {
-                    console.log('Response:', data); // Log the response for inspection
                     document.getElementById('apiValue').textContent = data;
                 })
                 .catch(error => {
@@ -198,11 +393,9 @@
                     document.getElementById('apiValue').textContent = 'Error fetching data';
                 });
         }
-
-        // Call the fetchData function when the page loads
         window.onload = fetchData;
     </script>
-</div>
 
+</div>
 </body>
 </html>
